@@ -12,6 +12,11 @@ pandas_cute has limited functionality but is still capable of a wide variety of 
 - Reading in simple comma-separated value files
 - Several other methods
 
+## Dependencies
+- python >= 3.6
+- jupyter
+- pytest
+
 ## How To Use
  ```python
     import pandas_cute as pdc
@@ -23,6 +28,7 @@ students = np.array(['Tom', 'Tom', 'Jack', 'Jack'])
 courses = np.array(['Math', 'English', 'Math', 'English'])
 scores = np.array([70, 65, 67, 91])
 data = {'students': students, 'courses': courses, 'scores': scores}
+
 #  create DataFrame
 df = pdc.DataFrame(data)
 ```
@@ -41,4 +47,14 @@ df = pdc.DataFrame(data)
     df.head()
 ```
 
-### 
+<hr/>
+
+## Unit Test
+### Run All tests (96)
+ ```python
+ pytest tests/test_dataframe.py
+ ```
+
+### Run Single test
+ ```python
+pytest tests/test_dataframe.py::TestDataFrameCreation::test_len ```
